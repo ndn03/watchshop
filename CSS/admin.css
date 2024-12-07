@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+ 
+}
+
+header {
+    background-color: #2A3F54;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.sidebar {
+    width: 250px;
+    margin-top: -25px;
+    background-color: #2A3F54;
+    padding-top: 20px;
+    min-height: calc(100vh - 60px); /* Adjust to make sidebar full height */
+    position: fixed;
+    top: 60px;
+    left: 0;
+}
+
+.menu {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.menu-item {
+    padding: 15px 20px;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-item a i {
+    margin-right: 10px;
+}
+
+.menu-item a:hover {
+    background-color: #1ABB9C;
+}
+
+/* Main content area */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    flex-grow: 1; 
+    background-color: #f4f4f4;
+    flex: 1;
+}
+
+h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+}
+/* Styles for the content sections */
+.content-section {
+    display: none; /* All sections are hidden by default */
+}
+.content-section button
+{
+    margin-left: 200px;
+    width: 30%;
+    height: 100px;
+}
+
+#product-info, #add-product {
+    display: none;
+}
+
+
+
+/* Main content styles */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    flex: 1;
+}
+
+.main-content h2{
+    text-align: center;
+    color: #333;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+}
+
+form,/* Căn chỉnh bảng */table {
+    width: 90%; /* Chiều rộng bảng chiếm toàn bộ không gian */
+    border-collapse: collapse; /* Gộp các đường viền lại với nhau */
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+/* Định dạng các ô trong bảng */
+th, td {
+    padding: 12px; /* Khoảng cách bên trong các ô */
+    text-align: left; /* Canh lề trái cho văn bản */
+    border: 1px solid #ddd; /* Đường viền mỏng xung quanh các ô */
+}
+
+/* Định dạng các tiêu đề cột */
+th {
+    background-color: #f4f4f4; /* Màu nền cho tiêu đề cột */
+    font-weight: bold; /* In đậm tiêu đề */
+}
+
+/* Hiệu ứng hover khi di chuột qua các dòng */
+tr:hover {
+    background-color: #f1f1f1; /* Màu nền thay đổi khi hover */
+}
+
+/* Định dạng bảng cho sản phẩm */
+.product-table th, .product-table td {
+    text-align: center; /* Căn giữa cho các sản phẩm */
+}
+
+/* Điều chỉnh đường viền bảng */
+table, th, td {
+    border: 1px solid #ddd; /* Đường viền màu xám nhạt */
+}
+
+/* Màu nền cho các sản phẩm */
+.product-table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Màu nền cho các dòng chẵn */
+}
+
+.product-table tr:nth-child(odd) {
+    background-color: #fff; /* Màu nền cho các dòng lẻ */
+}
+
+
+/* Popup */
+        .popup {
+            display: none; /* Ẩn popup mặc định */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4); /* Màu nền mờ */
+        }
+
+        .popup-content {
+            background-color: #fff;
+            margin: 10% auto;
+            padding: 20px;
+            border-radius: 5px;
+            width: 50%;
+        }
+
+        .popup-content h3 {
+            margin-top: 0;
+        }
+
+        .close {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }.content-section     
+
+/* Style cho Popup Xem Chi Tiết Đơn Hàng */
+#orderDetailsPopup {
+    display: none; /* Ẩn theo mặc định */
+    position: fixed;
+    z-index: 1000; /* Đặt trên các phần tử khác */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Cho phép cuộn nếu nội dung dài */
+    background-color: rgba(0, 0, 0, 0.5); /* Màu nền mờ */
+}
+
+/* Nội dung của popup Xem Chi Tiết Đơn Hàng */
+#orderDetailsPopup .popup-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Có thể điều chỉnh kích thước */
+    border-radius: 8px; /* Bo góc */
+}
+
+/* Nút đóng popup */
+#orderDetailsPopup .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#orderDetailsPopup .close:hover,
+#orderDetailsPopup .close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* Thông tin chi tiết sản phẩm trong popup */
+#orderDetailsPopup #orderDetails {
+    margin-top: 20px;
+}
+
+#orderDetailsPopup #orderDetails img {
+    max-width: 150px;
+    height: auto;
+    margin-top: 10px;
+}
+.password-column {
+    display: table-cell;
+}
+.password-column.hidden {
+    display: none;
+}
+/* Footer */
+footer {
+    background-color: #2A3F54;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    margin-top: auto; /* Đảm bảo footer luôn nằm ở dưới cùng */
+}
+.popup .form-group
+{
+    font-size: 19px;
+    padding: 3px;
+}
+.popup .form-group select
+{
+    text-align: center;
+    width: 30%;
+    font-size: 18px;
+}
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .main-content {
+        margin-left: 200px;
+    }
+
+    header, footer {
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        width: 100%;
+        position: relative;
+        min-height: auto;
+        padding-top: 0;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding-top: 20px;
+    }
+}

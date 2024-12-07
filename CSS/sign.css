@@ -1,0 +1,174 @@
+/* Reset lại margin, padding và box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cấu hình cơ bản cho body */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    display: flex; /* Sử dụng Flexbox cho body */
+    flex-direction: column; /* Sắp xếp theo chiều dọc */
+    min-height: 100vh; /* Đảm bảo chiều cao của body là ít nhất chiều cao của viewport */
+}
+
+/* Đảm bảo container được căn giữa */
+.container {
+    margin: 0 auto; /* Căn giữa theo chiều ngang */
+    text-align: center; /* Căn giữa văn bản trong container */
+    flex-grow: 1; /* Cho phép container chiếm không gian còn lại */
+}
+
+/* Cấu hình cho logo */
+.container .logo {
+    width: 60%;
+    font-size: 70px;
+}
+
+/* Cấu hình cho header */
+header {
+    background-color: #333;
+    padding: 20px 0;
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+/* Cấu hình cho form */
+.form-container {
+    display: flex;
+    justify-content: center; /* Căn giữa form container */
+    align-items: flex-start;
+    margin: 40px 0;
+}
+
+form {
+    font-size: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 25%;
+    height: 500px;
+    margin: 0 20px;
+}
+
+form h2 {
+    margin-bottom: 20px;
+    font-size: 35px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+p {
+    margin-top: 10px;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Cấu hình cho footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: auto; /* Đảm bảo footer luôn ở dưới cùng */
+}
+
+footer .container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.footer-section h6 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    border-bottom: 2px solid #00c8ff;
+    padding-bottom: 5px;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section a {
+    color: #00c8ff;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}

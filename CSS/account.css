@@ -1,0 +1,433 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  
+}
+
+/* Thanh Menu bên trái */
+.full-content
+{
+    width: 70%;
+    height: 80vh;
+    margin-left: 200px;
+
+    background-color: #007bff;
+}
+#sidebar {
+    width: 200px;
+    background-color: #ccc;
+    color: white;
+    padding: 15px;
+    height: 80vh;
+    position: absolute;
+   
+
+    display: flex;
+    
+}
+
+#sidebar h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin-left: 40px;
+}
+
+#sidebar ul li {
+    margin-bottom: 20px;
+}
+
+#sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    background-color: #444;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+#sidebar ul li a:hover {
+    background-color: #555;
+}
+
+/* Nội dung bên phải */
+#content {
+    text-align: center;
+    margin-left: 200px; /* Để nội dung không bị che khuất bởi sidebar */
+    padding: 20px;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: #f4f4f4;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+    margin-left: -150px;
+}
+
+/* Chỉnh sửa cho các phần nội dung */
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background-color: #007bff;
+    color: white;
+}
+
+thead th {
+    padding: 12px;
+    text-align: center;
+    font-size: 16px;
+}
+
+tbody td {
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Cột số lượng */
+input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Cột hình ảnh sản phẩm */
+td img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Nút Xóa */
+button {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e60000;
+}
+
+/* Tổng tiền và nút thanh toán */
+.cart-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.cart-summary button {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.cart-summary button:hover {
+    background-color: #218838;
+}
+
+/* Tạo hiệu ứng hover cho các dòng trong bảng */
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Đảm bảo các nút và các phần tử có khoảng cách đều */
+td, th {
+    padding: 10px;
+    text-align: center;
+}
+
+tfoot {
+    background-color: #f8f8f8;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+tfoot td {
+    padding: 10px;
+    border-top: 2px solid #ddd;
+}
+/* Form liên hệ */
+.contact-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.contact-form h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    height: 150px;
+}
+
+.contact-form button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
+
+/* Các phần còn lại của CSS hiện tại */
+.password-wrapper {
+    position: relative;
+}
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+header {
+    background-color: #2A3F54;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header .logo {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.container-form {
+    width: 100%;
+    margin-top: 15px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.form-group {
+  
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+/* Popup container */
+.popup {
+    display: none;  /* Ẩn mặc định */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);  /* Màu nền mờ */
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #fff;
+            margin: 10% auto;
+            padding: 20px;
+            border-radius: 5px;
+            width: 50%;
+}
+
+.popup-content table {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+
+.popup-content td {
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+.popup-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.message {
+    color: green; /* Màu xanh cho thông báo thành công */
+    font-weight: bold;
+}
+.message.error {
+    color: red; /* Màu đỏ cho thông báo lỗi */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+footer .container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.footer-section h6 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    border-bottom: 2px solid #00c8ff;
+    padding-bottom: 5px;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section a {
+    color: #00c8ff;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+}

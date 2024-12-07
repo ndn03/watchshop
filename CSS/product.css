@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+}
+header {
+    background-color: #333;
+    padding: 20px 0;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 10px 15px; /* Thêm khoảng trống (padding) cho phần chữ */
+    display: block;
+    white-space: nowrap; /* Đảm bảo chữ không xuống dòng */
+}
+
+/* Dropdown Menu */
+nav ul li:hover > .dropdown {
+    display: block;
+}
+
+nav ul .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    padding: 10px;
+    z-index: 100;
+    min-width: 150px; /* Đặt độ rộng tối thiểu cho menu con */
+}
+
+nav ul .dropdown li {
+    display: block;
+    margin-left: 0;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+nav ul .dropdown li a {
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 12px; /* Thêm padding để các mục con có không gian rộng rãi hơn */
+    display: block;
+    white-space: nowrap;
+}
+
+nav ul .dropdown li a:hover {
+    color: #e67e22;
+}
+/* Tổng thể cho container sản phẩm */
+.product-info-container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    gap: 20px;
+}
+h1
+{
+    text-align: center;
+    
+}
+
+/* Phần ảnh sản phẩm */
+.product-image img {
+    margin-left: -150px;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Chi tiết sản phẩm */
+.product-details {
+    max-width: 600px;
+    padding-left: 20px;
+}
+
+.product-details h2 {
+    font-size: 32px;
+    color: #333;
+}
+
+.product-price {
+    font-size: 28px;
+    color: #E74C3C;
+    margin: 10px 0;
+}
+
+.product-description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+.product-specs h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.product-specs ul {
+    list-style: none;
+    padding: 0;
+}
+
+.product-specs ul li {
+    font-size: 16px;
+    padding: 5px 0;
+}
+
+/* Nút thêm vào giỏ hàng */
+.add-to-cart-btn {
+    background-color: #2A3F54;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #1f2c3a;
+}
+
+/* Footer */
+footer {
+    margin-top: 160px;
+    background-color: #333; /* Màu nền tối */
+    color: #fff; /* Màu chữ sáng */
+    padding: 20px 0; /* Khoảng cách trên và dưới */
+}
+
+footer .container {
+    width: 90%; /* Chiều rộng của footer */
+    margin: 0 auto; /* Căn giữa footer */
+    display: flex;
+    flex-direction: column; /* Bố cục theo chiều dọc */
+}
+
+.footer-content {
+    display: flex; /* Sử dụng Flexbox cho các phần */
+    justify-content: space-between; /* Phân phối đều không gian */
+    margin-bottom: 20px; /* Khoảng cách giữa nội dung và dòng dưới */
+}
+
+.footer-section {
+    flex: 1; /* Mỗi phần chiếm không gian đều */
+    margin: 0 10px; /* Khoảng cách giữa các phần */
+}
+
+.footer-section h6 {
+    margin-bottom: 10px; /* Khoảng cách dưới tiêu đề */
+    font-size: 18px; /* Kích thước chữ tiêu đề */
+    border-bottom: 2px solid #00c8ff; /* Đường gạch dưới tiêu đề */
+    padding-bottom: 5px; /* Khoảng cách dưới đường */
+}
+
+.footer-section ul {
+    list-style-type: none; /* Không hiển thị dấu chấm */
+    padding: 0; /* Xóa padding mặc định */
+}
+
+.footer-section ul li {
+    margin: 5px 0; /* Khoảng cách giữa các mục */
+}
+
+.footer-section a {
+    color: #00c8ff; /* Màu liên kết */
+    text-decoration: none; /* Không gạch chân */
+}
+
+.footer-section a:hover {
+    text-decoration: underline; /* Gạch chân khi hover */
+}
+
+.footer-bottom {
+    text-align: center; /* Căn giữa dòng cuối */
+    margin-top: 20px; /* Khoảng cách trên dòng cuối */
+}
+
+.footer-bottom p {
+    margin: 0; /* Xóa margin */
+    font-size: 14px; /* Kích thước chữ */
+}

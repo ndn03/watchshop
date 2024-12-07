@@ -1,0 +1,155 @@
+/* Định dạng chung cho toàn trang */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container-show {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+/* Header và Footer không viền */
+header, footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    margin: 0; /* Loại bỏ khoảng cách trên và dưới */
+    border: none; /* Đảm bảo không có viền */
+    box-shadow: none; /* Loại bỏ bóng đổ */
+}
+
+
+header .logo {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+/* Tiêu đề trang */
+h2 {
+    color: #333;
+    font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+/* Thông tin đơn hàng */
+h3 {
+    color: #666;
+    font-size: 1.4em;
+    margin-top: 20px;
+}
+
+p {
+    line-height: 1.6;
+    font-size: 1em;
+}
+
+/* Bảng chi tiết sản phẩm */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+th {
+    background-color: #f2f2f2;
+    text-align: left;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+td {
+    text-align: left;
+    font-size: 1em;
+}
+
+/* Link trở về trang chủ */
+a {
+    color: #00c8ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+}
+
+footer .container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-section h6 {
+    font-size: 1.2em;
+    color: #00c8ff;
+    border-bottom: 2px solid #00c8ff;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 8px 0;
+}
+
+.footer-section a {
+    color: #00c8ff;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #aaa;
+}

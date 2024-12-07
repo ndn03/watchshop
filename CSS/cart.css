@@ -1,0 +1,239 @@
+/* Container chính cho giỏ hàng */
+.cart-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+/* Loại bỏ gạch dưới của liên kết trong logo */
+a.logo-link {
+    text-decoration: none; /* Loại bỏ gạch dưới */
+    color: inherit; /* Giữ lại màu sắc của logo */
+}
+
+.logo {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+/* Bảng giỏ hàng */
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.cart-table th, .cart-table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-table th {
+    background-color: #2A3F54;
+    color: white;
+}
+
+.cart-table td img {
+    width: 80px;
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.cart-product {
+    display: flex;
+    align-items: center;
+}
+
+.cart-table input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    text-align: center;
+}
+
+.remove-btn {
+    color: red;
+    text-decoration: none;
+}
+
+.remove-btn:hover {
+    text-decoration: underline;
+}
+
+/* Tổng kết giỏ hàng */
+
+.checkout-btn {
+    background-color: #2A3F54;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.checkout-btn:hover {
+    background-color: #1f2c3a;
+}
+
+/* Header & Footer */
+header, footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+}
+/* Phần phương thức thanh toán */
+.payment-method {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.payment-method label {
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.payment-method input {
+    margin-right: 8px;
+}
+
+/* Các phần còn lại như cũ... */
+/* Container chính cho thông tin khách hàng */
+.customer-info-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.customer-info-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form */
+.customer-info-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Nút xác nhận thanh toán */
+.submit-btn {
+    display: block;
+    width: 100%;
+    background-color: #2A3F54;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+/* Căn chỉnh phần select option */
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 8px;
+}
+
+
+.submit-btn:hover {
+    background-color: #1f2c3a;
+}
+
+/* Footer */
+footer {
+    background-color: #333; /* Màu nền tối */
+    color: #fff; /* Màu chữ sáng */
+    padding: 20px 0; /* Khoảng cách trên và dưới */
+}
+
+footer .container {
+    width: 90%; /* Chiều rộng của footer */
+    margin: 0 auto; /* Căn giữa footer */
+    display: flex;
+    flex-direction: column; /* Bố cục theo chiều dọc */
+}
+
+.footer-content {
+    display: flex; /* Sử dụng Flexbox cho các phần */
+    justify-content: space-between; /* Phân phối đều không gian */
+    margin-bottom: 20px; /* Khoảng cách giữa nội dung và dòng dưới */
+}
+
+.footer-section {
+    flex: 1; /* Mỗi phần chiếm không gian đều */
+    margin: 0 10px; /* Khoảng cách giữa các phần */
+}
+
+.footer-section h6 {
+    margin-bottom: 10px; /* Khoảng cách dưới tiêu đề */
+    font-size: 18px; /* Kích thước chữ tiêu đề */
+    border-bottom: 2px solid #00c8ff; /* Đường gạch dưới tiêu đề */
+    padding-bottom: 5px; /* Khoảng cách dưới đường */
+}
+
+.footer-section ul {
+    list-style-type: none; /* Không hiển thị dấu chấm */
+    padding: 0; /* Xóa padding mặc định */
+}
+
+.footer-section ul li {
+    margin: 5px 0; /* Khoảng cách giữa các mục */
+}
+
+.footer-section a {
+    color: #00c8ff; /* Màu liên kết */
+    text-decoration: none; /* Không gạch chân */
+}
+
+.footer-section a:hover {
+    text-decoration: underline; /* Gạch chân khi hover */
+}
+
+.footer-bottom {
+    text-align: center; /* Căn giữa dòng cuối */
+    margin-top: 20px; /* Khoảng cách trên dòng cuối */
+}
+
+.footer-bottom p {
+    margin: 0; /* Xóa margin */
+    font-size: 14px; /* Kích thước chữ */
+}
